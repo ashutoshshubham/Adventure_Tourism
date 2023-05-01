@@ -50,16 +50,17 @@ const NavBar = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor:'purple'}}>
                 <div className="container">
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Office_building_icon.png"
+                        src="https://cdn-icons-png.flaticon.com/512/5778/5778250.png"
                         height="35"
                         alt="MDB Logo"
                         loading="lazy"
                     />
+
                     <h4 className='text-white'>
-                        OFFICE SPACE
+                        ADVENTURE TOURISM
                     </h4>
 
                     <button

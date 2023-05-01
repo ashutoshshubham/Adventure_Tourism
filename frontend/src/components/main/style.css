@@ -1,0 +1,25 @@
+.signup-bg-image {
+    background-image: url('https://wallpapercave.com/wp/wp4002444.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-bg-image {
+    background-image: url('https://cdn.wallpapersafari.com/4/14/vbUn3T.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+.signup-card-position {
+    padding-top: 10%;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+}
+
+.login-card-position{
+    padding-top: 170px;
+}

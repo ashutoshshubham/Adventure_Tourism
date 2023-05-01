@@ -5,26 +5,26 @@ import { useUserContext } from "../../context/UserProvider";
 
 const NavBar = () => {
 
-    const { loggedIn, setLoggedIn, logout } = useUserContext();
+    // const { loggedIn, setLoggedIn, logout } = useUserContext();
 
-    const showLoggedIn = () => {
-        if (!loggedIn) {
-            return (
-                <>
-                    <li className="nav-item">
-                        <NavLink className="nav-link text-white" aria-current="page" to="/main/login">
-                            Login
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link text-white" aria-current="page" to="/main/signup">
-                            SignUp
-                        </NavLink>
-                    </li>
-                </>
-            );
-        }
-    }
+    // const showLoggedIn = () => {
+    //     if (!loggedIn) {
+    //         return (
+    //             <>
+    //                 <li className="nav-item">
+    //                     <NavLink className="nav-link text-white" aria-current="page" to="/main/login">
+    //                         Login
+    //                     </NavLink>
+    //                 </li>
+    //                 <li className="nav-item">
+    //                     <NavLink className="nav-link text-white" aria-current="page" to="/main/signup">
+    //                         SignUp
+    //                     </NavLink>
+    //                 </li>
+    //             </>
+    //         );
+    //     }
+    // }
 
     // const showLogout = () => {
     //     if (loggedIn) {
@@ -44,19 +44,19 @@ const NavBar = () => {
     return (
         <div>
 
-            <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+            <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor:'indigo'}}>
 
 
                 {/* Container wrapper */}
                 <div className="container text-white">
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Office_building_icon.png"
+                        src="https://cdn-icons-png.flaticon.com/512/5778/5778250.png"
                         height="35"
                         alt="MDB Logo"
                         loading="lazy"
                     />
 
-                    <h4>OFFICE SPACE</h4>
+                    <h4>ADVENTURE TOURISM</h4>
                     {/* Toggle button */}
                     <button
                         className="navbar-toggler"
@@ -84,12 +84,12 @@ const NavBar = () => {
                                     Home
                                 </NavLink>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <NavLink className="nav-link text-white" aria-current="page" to="browsespace">
                                     Browse Space
                                 </NavLink>
-                            </li>
-                            {/* <li className="nav-item">
+                            </li> */}
+                            <li className="nav-item">
                                 <NavLink className="nav-link text-white" to="login">
                                     Login
                                 </NavLink>
@@ -98,9 +98,9 @@ const NavBar = () => {
                                 <NavLink className="nav-link text-white" to="signup">
                                     SignUp
                                 </NavLink>
-                            </li> */}
+                            </li>
 
-                            {showLoggedIn()}
+                            {/* {showLoggedIn()} */}
                             {/* {showLogout()} */}
 
 

@@ -33,7 +33,7 @@ const Login = () => {
             const data = await res.json();
             console.log(data);
             sessionStorage.setItem('user', JSON.stringify(data));
-            navigate('/user/add_space')
+            // navigate('/user/add_space')
             resetForm();
         }
         else if (res.status === 401) {
