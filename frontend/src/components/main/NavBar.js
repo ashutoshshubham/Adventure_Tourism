@@ -5,38 +5,38 @@ import { useUserContext } from "../../context/UserProvider";
 
 const NavBar = () => {
 
-    // const { loggedIn, setLoggedIn, logout } = useUserContext();
+    const { loggedIn, setLoggedIn, logout } = useUserContext();
 
-    // const showLoggedIn = () => {
-    //     if (!loggedIn) {
-    //         return (
-    //             <>
-    //                 <li className="nav-item">
-    //                     <NavLink className="nav-link text-white" aria-current="page" to="/main/login">
-    //                         Login
-    //                     </NavLink>
-    //                 </li>
-    //                 <li className="nav-item">
-    //                     <NavLink className="nav-link text-white" aria-current="page" to="/main/signup">
-    //                         SignUp
-    //                     </NavLink>
-    //                 </li>
-    //             </>
-    //         );
-    //     }
-    // }
+    const showLoggedIn = () => {
+        if (!loggedIn) {
+            return (
+                <>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/login">
+                            Login
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/signup">
+                            SignUp
+                        </NavLink>
+                    </li>
+                </>
+            );
+        }
+    }
 
-    // const showLogout = () => {
-    //     if (loggedIn) {
-    //         return (
-    //             <li className="nav-item">
-    //                 <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
-    //                     Logout
-    //                 </button>
-    //             </li>
-    //         );
-    //     }
-    // }
+    const showLogout = () => {
+        if (loggedIn) {
+            return (
+                <li className="nav-item">
+                    <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
+                        Logout
+                    </button>
+                </li>
+            );
+        }
+    }
 
 
 
@@ -89,7 +89,7 @@ const NavBar = () => {
                                     Browse Space
                                 </NavLink>
                             </li> */}
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <NavLink className="nav-link text-white" to="login">
                                     Login
                                 </NavLink>
@@ -98,10 +98,10 @@ const NavBar = () => {
                                 <NavLink className="nav-link text-white" to="signup">
                                     SignUp
                                 </NavLink>
-                            </li>
+                            </li> */}
 
-                            {/* {showLoggedIn()} */}
-                            {/* {showLogout()} */}
+                            {showLoggedIn()}
+                            {showLogout()}
 
 
                         </ul>
