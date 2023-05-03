@@ -84,6 +84,22 @@ const NavBar = () => {
                                     Home
                                 </NavLink>
                             </li>
+                            <li className="nav-item ">
+                                <NavLink className="nav-link text-white" aria-current="page" to="browsePackage">
+                                    Browse Package
+                                </NavLink>
+                            </li>
+                            <li className="nav-item ">
+                                <NavLink className="nav-link text-white" aria-current="page" to="aSignup">
+                                    Admin
+                                </NavLink>
+                            </li>
+                            <li className="nav-item ">
+                                <NavLink className="nav-link text-white" aria-current="page" to="signup">
+                                    User
+                                </NavLink>
+                            </li>
+                            
                             {/* <li className="nav-item">
                                 <NavLink className="nav-link text-white" aria-current="page" to="browsespace">
                                     Browse Space

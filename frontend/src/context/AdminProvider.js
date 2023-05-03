@@ -10,7 +10,7 @@ const AdminProvider = ({ children, currentAdmin }) => {
   const logout = () => {
     sessionStorage.removeItem("admin");
     setLoggedIn(false);
-    navigate("/main/signin");
+    navigate("/admin/Asignin");
   };
 
   return (

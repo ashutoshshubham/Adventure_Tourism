@@ -1,8 +1,16 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
+import NavBar from './NavBar'
 
 const Admin = () => {
   return (
-    <div>Admin</div>
+    <div>
+
+      <NavBar />
+
+      <Outlet />
+
+    </div>
   )
 }
 
