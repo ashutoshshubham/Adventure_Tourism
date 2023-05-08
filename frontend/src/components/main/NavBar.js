@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useUserContext } from "../../context/UserProvider";
 
@@ -11,7 +11,7 @@ const NavBar = () => {
         if (!loggedIn) {
             return (
                 <>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <NavLink className="nav-link text-white" aria-current="page" to="/main/login">
                             Login
                         </NavLink>
@@ -20,7 +20,19 @@ const NavBar = () => {
                         <NavLink className="nav-link text-white" aria-current="page" to="/main/signup">
                             SignUp
                         </NavLink>
+                    </li> */}
+
+                    <li className="nav-item ">
+                        <NavLink className="nav-link text-white" aria-current="page" to="aSignup">
+                            Admin
+                        </NavLink>
                     </li>
+                    <li className="nav-item ">
+                        <NavLink className="nav-link text-white" aria-current="page" to="signup">
+                            User
+                        </NavLink>
+                    </li>
+
                 </>
             );
         }
@@ -44,7 +56,7 @@ const NavBar = () => {
     return (
         <div>
 
-            <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor:'indigo'}}>
+            <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: 'indigo' }}>
 
 
                 {/* Container wrapper */}
@@ -89,7 +101,7 @@ const NavBar = () => {
                                     Browse Package
                                 </NavLink>
                             </li>
-                            <li className="nav-item ">
+                            {/* <li className="nav-item ">
                                 <NavLink className="nav-link text-white" aria-current="page" to="aSignup">
                                     Admin
                                 </NavLink>
@@ -98,8 +110,8 @@ const NavBar = () => {
                                 <NavLink className="nav-link text-white" aria-current="page" to="signup">
                                     User
                                 </NavLink>
-                            </li>
-                            
+                            </li> */}
+
                             {/* <li className="nav-item">
                                 <NavLink className="nav-link text-white" aria-current="page" to="browsespace">
                                     Browse Space

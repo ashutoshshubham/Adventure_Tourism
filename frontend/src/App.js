@@ -11,13 +11,24 @@ import ALogin from './components/main/ALogin';
 import ASignUp from './components/main/ASignUp';
 import BrowsePackage from './components/main/BrowsePackage';
 import PackageDetails from './components/main/PackageDetails';
+import User from './components/user';
+import Booking from './components/user/Booking';
+import ManageBookings from './components/user/ManageBookings';
+import { useState } from 'react';
+import Footer from './components/main/Footer';
 
 function App() {
+
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+  const [currentAdmin, setCurrentAdmin] = useState(JSON.parse(sessionStorage.getItem('admin')));
+
+
+
+
   return (
 
     <BrowserRouter>
-
-      <UserProvider>
+      <UserProvider currentUser={currentUser}>
 
         <Routes>
 
@@ -38,7 +49,10 @@ function App() {
             <Route element={<SignUp />} path='signup' />
           </Route>
 
-          <Route element={<User />} path='user'></Route>
+          <Route element={<User />} path='user'>
+            <Route element={<Booking />} path='book/:packageid' />
+            <Route element={<ManageBookings />} path='managebooking' />
+          </Route>
 
         </Routes>
 

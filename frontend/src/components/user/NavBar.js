@@ -8,24 +8,24 @@ const NavBar = () => {
         JSON.parse(sessionStorage.getItem("user"))
     );
 
-    // const showLoggedIn = () => {
-    //     if (!loggedIn) {
-    //         return (
-    //             <>
-    //                 <li className="nav-item">
-    //                     <NavLink className="nav-link text-white" aria-current="page" to="/main/login">
-    //                         Login
-    //                     </NavLink>
-    //                 </li>
-    //                 <li className="nav-item">
-    //                     <NavLink className="nav-link text-white" aria-current="page" to="/main/signup">
-    //                         SignUp
-    //                     </NavLink>
-    //                 </li>
-    //             </>
-    //         );
-    //     }
-    // }
+    const showLoggedIn = () => {
+        if (!loggedIn) {
+            return (
+                <>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/login">
+                            Login
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link text-white" aria-current="page" to="/main/signup">
+                            SignUp
+                        </NavLink>
+                    </li>
+                </>
+            );
+        }
+    }
 
     const showLogout = () => {
         if (loggedIn) {
@@ -38,6 +38,7 @@ const NavBar = () => {
                     <button type="button" className="btn btn-dark me-3 mb-2" onClick={logout}>
                         LogOut
                     </button>
+                    
                     {/* <NavLink className="nav-link text-white" onClick={logout} type='button'>
                         <b>LOGOUT</b>
                     </NavLink> */}
@@ -74,16 +75,16 @@ const NavBar = () => {
                     >
                         <i className="fas fa-bars" />
                     </button>
-                    <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav  fs-5">
                             {/* <NavLink className="nav-link text-white" aria-current="page" to="/main/home">
                                 <b>HOME</b>
                             </NavLink> */}
-                            <NavLink className="nav-link text-white" aria-current="page" to="/user/add_space">
-                                <b>ADD SPACE</b>
+                            <NavLink className="nav-link text-white" aria-current="page" to="/main/browsePackage">
+                                Browse Package
                             </NavLink>
-                            <NavLink className="nav-link text-white" to="/user/manage_space">
-                                <b>MANAGE SPACE</b>
+                            <NavLink className="nav-link text-white" to="/user/managebooking">
+                                Manage Booking
                             </NavLink>
                             {/* <NavLink className="nav-link text-white" to="/user/profile">
                                 <b>PROFILE</b>
@@ -91,7 +92,7 @@ const NavBar = () => {
                             {/* <NavLink className="nav-link text-white" onClick={logout} type='button'>
                                 <b>LOGOUT</b>
                             </NavLink> */}
-                            {/* {showLoggedIn()} */}
+                            {showLoggedIn()}
                             {showLogout()}
 
                         </div>

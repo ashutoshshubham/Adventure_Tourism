@@ -23,3 +23,21 @@
 .login-card-position{
     padding-top: 170px;
 }
+
+
+.home-bg-image{
+    background-image: url("https://cdn.wallpapersafari.com/62/95/tK5DlW.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    height: 35rem;
+}
+
+
+
+.home-text-position{
+    padding-top: 150px;
+    /* color: rgb(46, 3, 3); */
+    color: white;
+    
+}
