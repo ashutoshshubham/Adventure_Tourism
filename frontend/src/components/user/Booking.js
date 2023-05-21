@@ -32,14 +32,14 @@ const Booking = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        package : packageid,
-    user : currentUser._id,
-    amount : packageDetails.price,
-    paymentDetails : "Payment Done",
-    createdAt: new Date()
-    })
+        package: packageid,
+        user: currentUser._id,
+        amount: packageDetails.price,
+        paymentDetails: "Payment Done",
+        createdAt: new Date()
+      })
     });
-    
+
     console.log(response.status);
 
     if (response.status === 200) {
@@ -49,7 +49,7 @@ const Booking = () => {
         icon: "success",
       })
       navigate("/user/managebooking");
-    }else{
+    } else {
       Swal.fire({
         title: "Error",
         text: "Something went wrong",

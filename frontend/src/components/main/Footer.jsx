@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div>
+        <div style={{marginTop:'30rem'}}>
             <footer className="bg-dark text-center text-white">
                 {/* Grid container */}
                 <div className="container p-4 pb-0">
@@ -65,9 +65,9 @@ const Footer = () => {
                     className="text-center p-3"
                     style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
                 >
-                    © 2020 Copyright:
+                    © 2023 Copyright:
                     <a className="text-white" href="https://mdbootstrap.com/">
-                        MDBootstrap.com
+                        AdventureTourism
                     </a>
                 </div>
                 {/* Copyright */}

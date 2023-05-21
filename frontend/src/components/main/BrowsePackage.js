@@ -33,7 +33,7 @@ const BrowsePackage = () => {
         if (!loading) {
             return (
 
-                <div style={{margin:'70px 0'}}>
+                <div>
                     {allPackage.map((pack, index) => (
 
                         <div className="row justify-content-center mb-3" key={pack._id}>
@@ -118,7 +118,7 @@ const BrowsePackage = () => {
 
 
     return (
-        <div className='container'>
+        <div className='container' style={{marginTop:'80px'}}>
             {displayPackageData()}
         </div>
     )

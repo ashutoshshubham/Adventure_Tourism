@@ -1,9 +1,10 @@
 import React from 'react'
 import './style.css'
+import Footer from './Footer'
 
 const Home = () => {
   return (
-    <div>
+    <div style={{height:'145vh'}}>
       {/* <div className='vh-100' style={{ backgroundImage: 'url("https://rare-gallery.com/uploads/posts/114990-far-cry-4-game-open-world-adventure-games-shooter-kyrat-himalayas-mountain-tibet-boat-lake-screenshot.jpg")', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
 
       </div> */}
@@ -116,6 +117,8 @@ const Home = () => {
         </div>
 
       </div>
+
+      <Footer />
 
     </div>
   )

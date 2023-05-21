@@ -65,7 +65,7 @@ const PackageDetails = () => {
 
 
     return (
-        <div className='container'>
+        <div className='container' style={{marginTop:'80px'}}>
             {displayDetails()}
         </div>
     )
