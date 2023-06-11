@@ -8,7 +8,7 @@ const ALogin = () => {
 
     const navigate = useNavigate()
 
-    // const {loggedIn, setLoggedIn} = useAdminContext();
+    const {loggedIn, setLoggedIn} = useAdminContext();
 
 
     const loginSubmit = async (formdata, { resetForm, setSubmitting }) => {
@@ -22,7 +22,7 @@ const ALogin = () => {
             headers: {
                 'Content-Type': 'application/json'
             }
-        });
+        }); 
 
         console.log(res.status)
 
@@ -32,7 +32,7 @@ const ALogin = () => {
                 title: 'Success',
                 text: 'Login Successful'
             })
-            // setLoggedIn(true)
+            setLoggedIn(true)
             const data = await res.json();
             console.log(data);
             sessionStorage.setItem('admin', JSON.stringify(data));

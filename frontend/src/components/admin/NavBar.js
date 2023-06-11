@@ -1,11 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { useUserContext } from "../../context/UserProvider";
+import { useAdminContext } from '../../context/AdminProvider';
 
 
 const NavBar = () => {
 
-    const { loggedIn, setLoggedIn, logout } = useUserContext();
+    const { loggedIn, setLoggedIn, logout } = useAdminContext();
 
     const showLoggedIn = () => {
         if (!loggedIn) {
@@ -84,11 +84,11 @@ const NavBar = () => {
                                     Add Package
                                 </NavLink>
                             </li>
-                            {/* <li className="nav-item">
-                                <NavLink className="nav-link text-white" aria-current="page" to="browsespace">
-                                    Browse Space
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-white" aria-current="page" to="updatePackage">
+                                    Update Package
                                 </NavLink>
-                            </li> */}
+                            </li>
                             {/* <li className="nav-item">
                                 <NavLink className="nav-link text-white" to="login">
                                     Login

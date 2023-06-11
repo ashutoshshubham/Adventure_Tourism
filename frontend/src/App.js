@@ -16,6 +16,8 @@ import Booking from './components/user/Booking';
 import ManageBookings from './components/user/ManageBookings';
 import { useState } from 'react';
 import Footer from './components/main/Footer';
+import AdminProvider from './context/AdminProvider';
+import UpdatePackage from './components/admin/UpdatePackage';
 
 function App() {
 
@@ -28,35 +30,38 @@ function App() {
   return (
 
     <BrowserRouter>
-      <UserProvider currentUser={currentUser}>
+      <AdminProvider currentAdmin={currentAdmin}>
+        <UserProvider currentUser={currentUser}>
 
-        <Routes>
+          <Routes>
 
-          <Route element={<Navigate to='/main/home' />} path='/' />
+            <Route element={<Navigate to='/main/home' />} path='/' />
 
-          <Route element={<Admin />} path='admin'>
-            <Route element={<AddPackage />} path='addPackage' />
+            <Route element={<Admin />} path='admin'>
+              <Route element={<AddPackage />} path='addPackage' />
+              <Route element={<UpdatePackage />} path='updatePackage' />
 
-          </Route>
+            </Route>
 
-          <Route element={<Main />} path='main'>
-            <Route element={<Home />} path='home' />
-            <Route element={<BrowsePackage />} path='browsePackage' />
-            <Route element={<PackageDetails />} path='packageDetails/:packageid' />
-            <Route element={<ALogin />} path='aLogin' />
-            <Route element={<ASignUp />} path='aSignup' />
-            <Route element={<Login />} path='login' />
-            <Route element={<SignUp />} path='signup' />
-          </Route>
+            <Route element={<Main />} path='main'>
+              <Route element={<Home />} path='home' />
+              <Route element={<BrowsePackage />} path='browsePackage' />
+              <Route element={<PackageDetails />} path='packageDetails/:packageid' />
+              <Route element={<ALogin />} path='aLogin' />
+              <Route element={<ASignUp />} path='aSignup' />
+              <Route element={<Login />} path='login' />
+              <Route element={<SignUp />} path='signup' />
+            </Route>
 
-          <Route element={<User />} path='user'>
-            <Route element={<Booking />} path='book/:packageid' />
-            <Route element={<ManageBookings />} path='managebooking' />
-          </Route>
+            <Route element={<User />} path='user'>
+              <Route element={<Booking />} path='book/:packageid' />
+              <Route element={<ManageBookings />} path='managebooking' />
+            </Route>
 
-        </Routes>
+          </Routes>
 
-      </UserProvider>
+        </UserProvider>
+      </AdminProvider>
 
     </BrowserRouter>
   );

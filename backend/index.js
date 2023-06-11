@@ -5,6 +5,8 @@ const userRouter = require('./routers/userRouter');
 const packageRouter = require('./routers/packageRouter');
 const bookRouter = require('./routers/bookRouter');
 const utilRouter = require('./routers/util')
+const adminRouter = require('./routers/adminRouter')
+
 
 
 // const feedbackRouter = require('./routers/feedbackRouter');
@@ -40,6 +42,7 @@ app.use(cors({
 
 app.use(express.json());                 //convert data from json to js
 app.use('/user', userRouter);      
+app.use('/admin', adminRouter);      
 app.use('/package', packageRouter); 
 app.use('/book', bookRouter);
 app.use('/util', utilRouter);
